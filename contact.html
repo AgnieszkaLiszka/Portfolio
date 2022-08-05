@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&family=Vollkorn:wght@400;700&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/18788bf696.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="wrap wrap__contact">  
+    <header class="header">
+        <div class="header__section header__section--media">
+            <a href="index.html">
+                <img src="img/me.jpg" alt="Me myself and I" height="130px" width="130px">
+            </a>
+        </div>
+        <div class="header__section header__section--menu">
+            <a class="logo" href="index.html">
+                Agnieszka Liszka
+            </a>
+            <nav class="menu">
+                <a class="menu__item" href="/projects.html">Projects</a>
+                <a class="menu__item" href="/edu&work.html">Edu&Work</a>
+                <a class="menu__item" href="/hobbies.html">Hobbies</a>
+                <a class="menu__item menu__item--active" href="/contact.html">Contact</a>
+            </nav>
+        </div> 
+    </header>
+   <section class="contact">
+        <article class="project">
+            <div class="project__intro">
+                <h1 class="project__title">
+                    Contact
+                </h1>
+                <p>
+                    If you’d like to chat about a project or just have question, please fill in the form below. I aim to get back within 2 days.
+                </p>
+            </div>    
+        </article> 
+        <form class="contact__form" action="results.html" method="GET">
+            <div class="contact__data" id="contact__name">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="contact__data" id="contact__email">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="contact__data" id="contact__phone">
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone">
+            </div>
+            <div class="contact__data" id="contact__subject">
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject">
+            </div>
+            <div class="contact__data" id="contact__message">
+                <label for="message">Message</label>
+                <textarea name="message" id="message"></textarea>
+            </div>
+            <div id="contact__button">
+                <label for="button"></label>
+                <input type="submit" class="btn" name="button" value="Send Message">
+            </div>
+        </form>
+   </section>
+   <footer class="contact__footer">  
+        <div class="social">
+           <a target="_blank" href="https://www.instagram.com/agnieszkaliszka/">
+               <i class="fa-brands fa-instagram-square"></i>
+            </a>
+           <a target="_blank" href="https://www.facebook.com/agnieszkappp/">
+               <i class="fa-brands fa-facebook-square"></i>
+            </a>
+            <a target="_blank" href="https://github.com/AgnieszkaLiszka">
+                <i class="fa-brands fa-github-square"></i>
+            </a>
+        </div>
+        <p>&copy; Agnieszka Liszka 2022</p>
+    </footer>
+  </div>
+</body>
+</html>
