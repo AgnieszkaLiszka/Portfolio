@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&family=Vollkorn:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&family=Vollkorn:wght@400;700&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/18788bf696.js" crossorigin="anonymous"></script> 
+    <script defer src="/menu.js"></script>
+    <script defer src="/logo.js"></script>
 </head>
 <body>
   <div class="wrap wrap__contact">  
@@ -21,14 +23,19 @@
             </a>
         </div>
         <div class="header__section header__section--menu">
-            <a class="logo" href="index.html">
+            <a id="mainLogo" class="logo" href="index.html">
                 Agnieszka Liszka
             </a>
-            <nav class="menu">
-                <a class="menu__item" href="/projects.html">Projects</a>
-                <a class="menu__item" href="/edu&work.html">Edu&Work</a>
-                <a class="menu__item" href="/hobbies.html">Hobbies</a>
-                <a class="menu__item" href="/contact.html">Contact</a>
+            <nav class="menu" id="menu__burger">
+                <div class="menu__wrap">
+                    <a class="menu__item" href="/projects.html">Projects</a>
+                    <a class="menu__item" href="/edu&work.html">Edu&Work</a>
+                    <a class="menu__item" href="/hobbies.html">Hobbies</a>
+                    <a class="menu__item" href="/contact.html">Contact</a>
+                </div>
+                <a class="menu__item menu__item--hidden">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
             </nav>
         </div> 
     </header>
