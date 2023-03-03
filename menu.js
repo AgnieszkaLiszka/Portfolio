@@ -1,13 +1,17 @@
-function menuBurger() {
-    let x = document.getElementById('menu__burger');
-    if(x.className === 'menu') {
-        x.className += ' responsive';
+function menuBurger(event) {
+    event.preventDefault()
+    console.log(event)
+    const navMenu = document.getElementById('menu__nav');
+    
+    if(navMenu.className === 'menu') {
+        navMenu.className += ' responsive';
     } else {
-        x.className = 'menu'
+        navMenu.className = 'menu'
     }
 }
 
 document.getElementById('menu__burger').addEventListener('click', menuBurger)
+
 
 
 

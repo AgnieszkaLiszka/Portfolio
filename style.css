@@ -75,23 +75,19 @@ body {
 }
 
 .header {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-@media screen and (max-width: 816px) {
-    .header {
-        flex-direction: column;
-    }
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
 }
 
 .header__section {
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
 .header__section--media {
     display: flex;
-    margin-right: 4rem;
+    justify-content: space-between;
 }
 
 .header__section--media img {
@@ -104,8 +100,16 @@ body {
     transition: all 1s ease-in-out
 }
 
+@media screen and (max-width: 816px) {
+    .header__section--media img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
 .header__section--menu {
     margin-top: 1rem;
+    margin-bottom: 3rem;
     font-family: 'Cinzel', serif;
 }
 
