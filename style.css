@@ -54,7 +54,7 @@ body {
 }
 
 .wrap {
-    padding: 3rem;   
+    padding: 3rem;  
 }
 
 @media screen and (min-width: 900px) {
@@ -82,6 +82,25 @@ body {
     padding-left: 3rem;
     padding-right: 3rem;
     padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/*ADD SCROLL CLASS TO HEADER SECTION*/
+.header__main--scroll {
+    box-shadow: 0em .2em 1em var(--gray);
+}
+
+.header__main--scroll img {
+    height: 40px;
+    width: 40px;
+}
+
+.header__main--scroll .logo {
+    font-size: 2em;
+}
+
+.header__main--scroll .menu__item {
+    font-size: 1.5em;
 }
 
 .header__section--media {
@@ -92,11 +111,6 @@ body {
 .header__section--media img {
     border-radius: 1000em;
     transition: all 1s ease-in-out;
-}
-
-.header__section--media img:hover {
-    transform: scale(1.1);
-    transition: all 1s ease-in-out
 }
 
 @media screen and (max-width: 816px) {
@@ -119,6 +133,7 @@ body {
     letter-spacing: .5em;
     text-transform: uppercase;
     line-height: 2em;
+    transition: all 1s ease-in-out;
 }
 
 .logo:hover {
@@ -145,6 +160,7 @@ body {
     letter-spacing: .1em;
     text-decoration: none;
     line-height: 2em;
+    transition: all 1s ease-in-out;
 }
 
 .menu__item:hover {
@@ -170,7 +186,7 @@ body {
         padding-left: 2em;
         flex-direction: column;
         height: 0;
-        transition: height 2s ease-in-out;
+        transition: height 1s ease-in-out;
         overflow: hidden;
     }
 
@@ -188,7 +204,7 @@ body {
     .menu.responsive .menu__wrap {
         display: flex;
         height: 150px;
-        transition: height 2s ease-in-out;
+        transition: height 1s ease-in-out;
     }
 }
 
