@@ -17,6 +17,7 @@
       --blue: hsl(190, 70%, 60%);
       --light-blue: hsl(190, 70%, 95%);
       --gray: hsl(0, 4%, 30%);
+      --light-gray: hsl(0, 4%, 80%);     
   }
 
 .btn {
@@ -74,6 +75,8 @@ body {
     margin-right: auto;
 }
 
+/* HEADER SECTION */
+
 .header {
     position: sticky;
     top: 0;
@@ -81,36 +84,20 @@ body {
     z-index: 1;
     padding-left: 3rem;
     padding-right: 3rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-/*ADD SCROLL CLASS TO HEADER SECTION*/
-.header__main--scroll {
-    box-shadow: 0em .2em 1em var(--gray);
-}
-
-.header__main--scroll img {
-    height: 40px;
-    width: 40px;
-}
-
-.header__main--scroll .logo {
-    font-size: 2em;
-}
-
-.header__main--scroll .menu__item {
-    font-size: 1.5em;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
 }
 
 .header__section--media {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+
 }
 
 .header__section--media img {
     border-radius: 1000em;
     transition: all 1s ease-in-out;
+    margin: .5rem 2rem;
 }
 
 @media screen and (max-width: 816px) {
@@ -120,13 +107,8 @@ body {
     }
 }
 
-.header__section--menu {
-    font-family: 'Cinzel', serif;
-}
-
 .logo {
-    display: block;
-    margin-bottom: 1rem;
+    align-self: center;
     color: var(--beige);
     font-size: 3em;
     font-weight: 600;
@@ -146,10 +128,15 @@ body {
     }
 }
 
+.header__section--menu {
+    font-family: 'Cinzel', serif;
+}
+
 .menu {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     position: relative;
 }
 
@@ -160,7 +147,7 @@ body {
     letter-spacing: .1em;
     text-decoration: none;
     line-height: 2em;
-    transition: all 1s ease-in-out;
+    transition: all .35s ease-in-out;
 }
 
 .menu__item:hover {
@@ -176,14 +163,17 @@ body {
 }
 
 @media screen and (max-width: 816px) {
+
+    .menu {
+        justify-content: flex-start;
+    }
+
     .menu__item {
         font-size: 1.5em;
     }
        
     .menu__wrap {
         display: flex;
-        padding-top: 2em;
-        padding-left: 2em;
         flex-direction: column;
         height: 0;
         transition: height 1s ease-in-out;
@@ -193,8 +183,7 @@ body {
     .menu__item--hidden {
         display: flex; 
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 2.4rem;
     }
 
     .menu.responsive {
@@ -203,7 +192,7 @@ body {
 
     .menu.responsive .menu__wrap {
         display: flex;
-        height: 150px;
+        height: 120px;
         transition: height 1s ease-in-out;
     }
 }
@@ -217,6 +206,27 @@ a {
 a:hover {
     color: var(--beige);
 }
+
+/*ADD SCROLL CLASS TO HEADER SECTION*/
+.header__main--scroll {
+    box-shadow: 0em .2em 1em var(--light-gray);
+}
+
+.header__main--scroll img {
+    height: 40px;
+    width: 40px;
+}
+
+.header__main--scroll .logo {
+    font-size: 2em;
+}
+
+.header__main--scroll .menu__item {
+    font-size: 1.5em;
+}
+
+
+/* MAIN SECTION */
 
 main {
     display: flex;
