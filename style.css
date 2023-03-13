@@ -7,6 +7,7 @@
   
   html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
   }
 
   :root {
@@ -52,6 +53,13 @@
 body {
     background-color: hsl(0, 0%, 100%);
     color: hsl(0, 0%, 0%);
+    padding-top: 153px;
+}
+
+@media screen and (max-width: 816px) {
+    body {
+        padding-top: 0;
+    }
 }
 
 .wrap {
@@ -78,8 +86,9 @@ body {
 /* HEADER SECTION */
 
 .header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
     background-color: white;
     z-index: 1;
     padding-left: 3rem;
@@ -88,20 +97,26 @@ body {
     padding-bottom: .5rem;
 }
 
+@media screen and (max-width: 816px) {
+    .header {
+        position: sticky;
+    }
+}
+
 .header__section--media {
     display: flex;
     justify-content: center;
 
 }
 
-.header__section--media img {
+#logo__img {
     border-radius: 1000em;
     transition: all 1s ease-in-out;
     margin: .5rem 2rem;
 }
 
 @media screen and (max-width: 816px) {
-    .header__section--media img {
+    #logo__img {
         height: 40px;
         width: 40px;
     }
@@ -184,6 +199,7 @@ body {
         display: flex; 
         position: absolute;
         top: 2.4rem;
+        cursor: pointer;
     }
 
     .menu.responsive {
@@ -212,7 +228,7 @@ a:hover {
     box-shadow: 0em .2em 1em var(--light-gray);
 }
 
-.header__main--scroll img {
+.header__main--scroll #logo__img {
     height: 40px;
     width: 40px;
 }
@@ -225,6 +241,19 @@ a:hover {
     font-size: 1.5em;
 }
 
+/* SCROLL to the link */
+
+.scroll {
+    padding-top: 10rem;
+    margin-top: -10rem;
+}
+
+@media screen and (max-width: 816px) {
+    .scroll {
+        padding-top: 18rem;
+        margin-top: -18rem;
+    }
+}
 
 /* MAIN SECTION */
 
@@ -264,7 +293,7 @@ main {
 }
 
 .project__intro {
-    padding-bottom: 2rem;
+    padding-top: 2rem;
     font-family: 'Vollkorn', serif;
     font-size: 2rem;
     letter-spacing: .1rem;
@@ -453,9 +482,10 @@ figcaption {
 
 .experience__part {
     display: grid;
-    grid-template-rows: 5rem repeat(3, 18rem);
+    grid-template-rows: 3rem repeat(3, 18rem);
     grid-auto-rows: 15rem;
     gap: 3rem;
+    margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 816px) {
@@ -474,7 +504,6 @@ figcaption {
 .experience__part > h1 {
     font-size: 2rem;
     text-transform: uppercase;
-    
 }
 
 .experience__degree {
