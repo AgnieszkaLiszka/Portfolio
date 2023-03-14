@@ -58,7 +58,7 @@ body {
 
 @media screen and (max-width: 816px) {
     body {
-        padding-top: 0;
+        padding-top: 53px;
     }
 }
 
@@ -97,12 +97,6 @@ body {
     padding-bottom: .5rem;
 }
 
-@media screen and (max-width: 816px) {
-    .header {
-        position: sticky;
-    }
-}
-
 .header__section--media {
     display: flex;
     justify-content: center;
@@ -130,7 +124,6 @@ body {
     letter-spacing: .5em;
     text-transform: uppercase;
     line-height: 2em;
-    transition: all 1s ease-in-out;
 }
 
 .logo:hover {
@@ -162,7 +155,7 @@ body {
     letter-spacing: .1em;
     text-decoration: none;
     line-height: 2em;
-    transition: all .35s ease-in-out;
+    transition: color .35s ease-in-out;
 }
 
 .menu__item:hover {
@@ -191,7 +184,7 @@ body {
         display: flex;
         flex-direction: column;
         height: 0;
-        transition: height 1s ease-in-out;
+        transition: height .5s ease-in-out;
         overflow: hidden;
     }
 
@@ -209,7 +202,6 @@ body {
     .menu.responsive .menu__wrap {
         display: flex;
         height: 120px;
-        transition: height 1s ease-in-out;
     }
 }
 
@@ -250,8 +242,8 @@ a:hover {
 
 @media screen and (max-width: 816px) {
     .scroll {
-        padding-top: 18rem;
-        margin-top: -18rem;
+        padding-top: 6rem;
+        margin-top: -6rem;
     }
 }
 
