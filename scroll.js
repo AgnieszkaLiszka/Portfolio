@@ -1,11 +1,18 @@
-const logo = document.getElementById('header__main');
+const header = document.getElementById('header__main');
 
 function scrollPage(event) {
-   if (window.scrollY > 0) {
-        logo.classList.add('header__main--scroll')
+    
+   if (window.scrollY > 0 || window.scrollY === 0 && navMenu.classList.contains('responsive')) {
+        header.classList.add('header__main--scroll')
         return 
     }
-    logo.classList.remove('header__main--scroll')   
+    header.classList.remove('header__main--scroll')   
+
+    // if () {
+    //     logo.classList.add('header__main--scroll')
+    // } else {
+    //     return
+    // }
 }
 
 

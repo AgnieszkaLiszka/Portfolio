@@ -1,6 +1,6 @@
-// When the user clicks on the bars, function shows the dropdown content with shadow
+// When the user clicks on the bars, function shows the dropdown content
 const navMenu = document.getElementById('menu__nav');
-const header = document.getElementById('header__main')
+//const header = document.getElementById('header__main');
 
 function menuBurger(event) {
     event.preventDefault()
@@ -8,15 +8,17 @@ function menuBurger(event) {
 
     if (!navMenu.classList.contains('responsive')) {
         navMenu.classList.add('responsive');
-    } else {
-        navMenu.classList.remove('responsive')
-    }
-
-    if (navMenu.classList.contains('responsive')) {
         header.classList.add('header__main--scroll');
     } else {
-        header.classList.remove('header__main--scroll')
+        navMenu.classList.remove('responsive')
+        header.classList.remove('header__main--scroll');
     }
+
+    // if (navMenu.classList.contains('responsive')) {
+    //     header.classList.add('header__main--scroll');
+    // } else {
+    //     header.classList.remove('header__main--scroll')
+    // }
 }
 
 document.getElementById('menu__burger').addEventListener('click', menuBurger)

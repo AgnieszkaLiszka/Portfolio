@@ -32,7 +32,7 @@
     color: hsl(0, 0%, 100%);  
     background-color: var(--beige);
     border-radius: .5em; 
-    border: transparent .1em solid;
+    border: white .1em solid;
     transition: all .35s ease;
 }
 
@@ -95,12 +95,12 @@ body {
     padding-right: 3rem;
     padding-top: .5rem;
     padding-bottom: .5rem;
+    transition: box-shadow .5s ease-in-out;
 }
 
 .header__section--media {
     display: flex;
     justify-content: center;
-
 }
 
 #logo__img {
@@ -124,6 +124,7 @@ body {
     letter-spacing: .5em;
     text-transform: uppercase;
     line-height: 2em;
+    transition: font-size .5s ease-in-out;
 }
 
 .logo:hover {
@@ -155,7 +156,7 @@ body {
     letter-spacing: .1em;
     text-decoration: none;
     line-height: 2em;
-    transition: color .35s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 .menu__item:hover {
@@ -323,13 +324,6 @@ main {
 .project__img img {
     width: 100%;
     border-radius: 1em;
-    transition: all 1s ease-in-out;
-}
-
-.project__img img:hover {
-    transition: all 1s ease-in-out;
-    filter: brightness(2);
-    transform: scale(1.05);
 }
 
 figcaption {
@@ -578,6 +572,7 @@ figcaption {
 .img-wrapper {
     position: relative;
     overflow: hidden;
+    box-shadow: 0em .1em .5em var(--light-gray);
 } 
 
 .img-wrapper > img {
