@@ -4,7 +4,6 @@ const navMenu = document.getElementById('menu__nav');
 
 function menuBurger(event) {
     event.preventDefault()
-    console.log(event)
 
     if (!navMenu.classList.contains('responsive')) {
         navMenu.classList.add('responsive');
