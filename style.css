@@ -679,7 +679,7 @@ figcaption {
     gap: 2rem;
 }
 
-.contact__form {
+#contact__form {
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr 1fr;
@@ -691,8 +691,8 @@ figcaption {
                             "button button";    
 }
 
-@media screen and (max-width: 470px) {
-    .contact__form {
+@media screen and (max-width: 550px) {
+    #contact__form {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 7rem) 1fr 8rem;
         grid-template-areas:    "name"
@@ -747,15 +747,23 @@ figcaption {
     text-transform: uppercase;
 }
 
-.contact__data > input, textarea {
+.contact__data--look {
     padding: .5rem;
     font-size: 2rem;
-    color: var(--beige)
+    color: var(--beige);
 }
 
-.contact__data > input:focus, textarea:focus {
-    box-shadow: 0 0 .5rem var(--beige);
+.contact__data--look:focus {
+    box-shadow: 0 0 .5rem var(--blue);
     outline: none;
+}
+
+/* styles for invalid form when typing */
+.contact__data--look:invalid:focus {
+    background-color: var(--light-blue);
+    border: none;
+    outline: .1rem solid red;
+    border-radius: .2rem;
 }
 
 #message {
@@ -791,3 +799,4 @@ figcaption {
         font-size: 3rem;
     }
 }
+

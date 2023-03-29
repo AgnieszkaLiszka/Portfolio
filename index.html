@@ -261,30 +261,30 @@
             </p>
         </div>    
     </article> 
-    <form class="contact__form" action="results.html" method="GET" novalidate>
+    <form autocomplete="off" id="contact__form" action="results.html" method="GET" novalidate>
         <div class="contact__data" id="contact__name">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" minlength="3" maxlength="10" required >
+            <input autocomplete="off" class="contact__data--look" type="text" name="name" id="name" minlength="3" maxlength="10" required >
             <div class="contact__form--error"></div>
         </div>
         <div class="contact__data" id="contact__email">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
+            <input class='contact__data--look' type="email" name="email" id="email" required>
             <div class="contact__form--error"></div>
         </div>
         <div class="contact__data" id="contact__phone">
             <label for="phone">Phone</label>
-            <input type="tel" name="phone" id="phone">
+            <input placeholder="xxx-xxx-xxx" class="contact__data--look" type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
             <div class="contact__form--error"></div>
         </div>
         <div class="contact__data" id="contact__subject">
             <label for="subject">Subject</label>
-            <input type="text" name="subject" id="subject">
+            <input required class="contact__data--look" type="text" name="subject" id="subject">
             <div class="contact__form--error"></div>
         </div>
         <div class="contact__data" id="contact__message">
             <label for="message">Message</label>
-            <textarea name="message" id="message"></textarea>
+            <textarea class="contact__data--look" name="message" id="message"></textarea>
             <div class="contact__form--error"></div>
         </div>
         <div id="contact__button">

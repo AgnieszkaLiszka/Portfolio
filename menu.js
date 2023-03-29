@@ -28,7 +28,7 @@ document.getElementById('menu__burger').addEventListener('click', menuBurger)
 const burger = document.getElementById('menu__burger')
 
 function closeMenu(event) {
-    console.log(event.target === burger)
+    //console.log(event.target === burger)
     //console.log(event.target.contains(navMenu))
     
     if (burger.contains(event.target)) {

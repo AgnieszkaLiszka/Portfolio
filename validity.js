@@ -3,7 +3,7 @@ const getCustomValidity = input => {
     const name = input.name.charAt(0).toUpperCase() + input.name.slice(1);
 
     if (validity.valueMissing) {
-        return `${name} is needed for account`;
+        return `${name} is needed`;
     }
     if (validity.tooShort) {
         return `Please provide at least ${input.minLength} characters for ${name}`;
@@ -24,6 +24,14 @@ const getCustomValidity = input => {
         if (input.type === 'url') {
             return `Please provide a valid url - copy it from browser address bar`
         }
+        if (input.type === 'tel') {
+            return `Please provide a valid telephone number in format: XXX-XXX-XXX`
+        }
+    }
+    if (validity.patternMismatch) {
+        if (input.type === 'tel') {
+            return `Please provide a valid telephone number in format: XXX-XXX-XXX`
+        }
     }
     return '';
 }
@@ -33,7 +41,6 @@ const form = document.querySelector('form');
 
 const validateInput = input => {
     const customValidityMessage = getCustomValidity(input);
-    console.log(customValidityMessage)
     input.setCustomValidity(customValidityMessage);
 }
 
@@ -45,7 +52,7 @@ const handleINputCHange = event => {
         .parentElement
         .querySelector('.contact__form--error').innerHTML = '';
     validateInput(input);
-    
+
 }
 
 
@@ -71,4 +78,21 @@ form.addEventListener('submit', e => {
 
     const values = inputs
         .reduce
+
+    
+    let data = new FormData(form);
+    // console.log(data)
+    // for (let [key, value] of data) {
+    //     console.log(key);
+    //     console.log(value);
+    // }
+
+    let obj = {};
+    for (let [key, value] of data) {
+        obj[key] = value;
+    }
+
+    console.log(obj)
+    console.log(JSON.stringify(obj))
 })
+
