@@ -15,6 +15,7 @@
     <script defer src="/logo.js"></script>
     <script defer src="/scroll.js"></script>
     <script defer src="/validity.js"></script>
+    <script defer src="/contact.js"></script>
 </head>
 <body>
     <header id="header__main" class="header">
@@ -35,7 +36,7 @@
                     <a class="menu__item" href="#projects">Projects</a>
                     <a class="menu__item" href="#edu&work">Edu&Work</a>
                     <a class="menu__item" href="#hobbies">Hobbies</a>
-                    <a class="menu__item" href="#contact">Contact</a>
+                    <a id="menu__item--modal" class="menu__item" href="#contact">Contact</a>
                 </div>
             </nav>
         </div> 
@@ -249,52 +250,6 @@
         </div>
    </section>
    </section>
-
-   <section id="contact" class="scroll">
-    <article class="project">
-        <div class="project__intro">
-            <h1 class="project__title">
-                Contact
-            </h1>
-            <p>
-                If you’d like to chat about a project or just have question, please fill in the form below. I aim to get back within 2 days.
-            </p>
-        </div>    
-    </article> 
-    <form autocomplete="off" id="contact__form" action="results.html" method="GET" novalidate>
-        <div class="contact__data" id="contact__name">
-            <label for="name">Name</label>
-            <input autocomplete="off" class="contact__data--look" type="text" name="name" id="name" minlength="3" maxlength="10" required >
-            <div class="contact__form--error"></div>
-        </div>
-        <div class="contact__data" id="contact__email">
-            <label for="email">Email</label>
-            <input class='contact__data--look' type="email" name="email" id="email" required>
-            <div class="contact__form--error"></div>
-        </div>
-        <div class="contact__data" id="contact__phone">
-            <label for="phone">Phone</label>
-            <input placeholder="xxx-xxx-xxx" class="contact__data--look" type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
-            <div class="contact__form--error"></div>
-        </div>
-        <div class="contact__data" id="contact__subject">
-            <label for="subject">Subject</label>
-            <input required class="contact__data--look" type="text" name="subject" id="subject">
-            <div class="contact__form--error"></div>
-        </div>
-        <div class="contact__data" id="contact__message">
-            <label for="message">Message</label>
-            <textarea class="contact__data--look" name="message" id="message"></textarea>
-            <div class="contact__form--error"></div>
-        </div>
-        <div id="contact__button">
-            <label for="button"></label>
-            <input type="submit" class="btn" name="button" value="Send Message">
-            <div class="contact__form--error"></div>
-        </div>
-    </form>
-   </section>
-
    <footer class="contact__footer">  
     <div class="social">
        <a target="_blank" href="https://www.instagram.com/agnieszkaliszka/">
@@ -310,5 +265,53 @@
     <p>&copy; Agnieszka Liszka 2022</p>
 </footer>
   </div>
+  <div id="contact__modal">
+    <section id="contact">
+        <span id="contact__close">&times;</span>
+        <article id="contact__intro" class="project">
+            <div class="project__intro">
+                <h1 class="project__title">
+                    Contact
+                </h1>
+                <p>
+                    If you’d like to chat about a project or just have question, please fill in the form below. I aim to get back within 2 days.
+                </p>
+            </div>    
+        </article> 
+        <form autocomplete="off" id="contact__form" action="results.html" method="GET" novalidate>
+            <div class="contact__data" id="contact__name">
+                <label for="name">Name</label>
+                <input autocomplete="off" class="contact__data--look" type="text" name="name" id="name" minlength="3" maxlength="10" required >
+                <div class="contact__form--error"></div>
+            </div>
+            <div class="contact__data" id="contact__email">
+                <label for="email">Email</label>
+                <input class='contact__data--look' type="email" name="email" id="email" required>
+                <div class="contact__form--error"></div>
+            </div>
+            <div class="contact__data" id="contact__phone">
+                <label for="phone">Phone</label>
+                <input placeholder="xxx-xxx-xxx" class="contact__data--look" type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
+                <div class="contact__form--error"></div>
+            </div>
+            <div class="contact__data" id="contact__subject">
+                <label for="subject">Subject</label>
+                <input required class="contact__data--look" type="text" name="subject" id="subject">
+                <div class="contact__form--error"></div>
+            </div>
+            <div class="contact__data" id="contact__message">
+                <label for="message">Message</label>
+                <textarea class="contact__data--look" name="message" id="message"></textarea>
+                <div class="contact__form--error"></div>
+            </div>
+            <div id="contact__button">
+                <label for="button"></label>
+                <input type="submit" class="btn" name="button" value="Send Message">
+                <div class="contact__form--error"></div>
+            </div>
+        </form>
+    </section>
+    </div>
+
 </body>
 </html>
