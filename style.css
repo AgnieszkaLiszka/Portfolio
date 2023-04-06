@@ -678,10 +678,31 @@ figcaption {
     padding: 2em;
     background-color: var(--light-pink);
     border: .2em solid var(--gray);
-    width: 80%;
+    width: 70%;
     overflow: hidden;
     overflow-y: scroll;
     max-height: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: rotate;
+    animation-duration: 1s;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+      scale: 0;
+    }
+    100% {
+      transform: rotate(360deg);
+      scale: 1;
+    }
+  }
+
+@media screen and (max-width: 700px) {
+    #contact {
+        padding: .5em 2em .5em 2em;
+        width: 90%;
+    }
 }
 
 #contact__intro {
@@ -704,12 +725,25 @@ figcaption {
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
+    animation-name: slide;
+    animation-duration: .5s;
 }
+
+@keyframes slide {
+    0% {
+      transform: slide;
+      scale: 0;
+    }
+    100% {
+      transform: slide;
+      scale: 1;
+    }
+  }
 
 #contact__close {
     position: absolute;
     top: 0;
-    right: 5%;
+    right: 3%;
     margin-top: .5em;
     color: var(--pinky);
     font-size: 3em;
@@ -730,7 +764,7 @@ figcaption {
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 8rem 8rem 1fr 1fr;
+    grid-template-rows: 5rem 5rem 1fr 5rem;
     grid-auto-rows: 1fr;
     grid-template-areas:    "name email"
                             "phone subject"
@@ -739,10 +773,6 @@ figcaption {
 }
 
 @media screen and (max-width: 700px) {
-    #contact {
-        padding: .5em 2em .5em 2em;
-    }
-
     #contact__form {
         display: block;
     }
