@@ -12,7 +12,7 @@
 
   :root {
       --pinky: hsl(340, 70%, 60%);
-      --light-pink: hsl(340, 70%, 90%);
+      --light-pink: hsl(340, 70%, 95%);
       --beige: hsl(40, 70%, 60%);
       --light-beige: hsl(40, 70%, 95%);
       --blue: hsl(190, 70%, 60%);
@@ -676,7 +676,7 @@ figcaption {
 #contact {
     position: relative;
     padding: 2em;
-    background-color: var(--light-pink);
+    background-color: var(--light-blue);
     border: .2em solid var(--gray);
     width: 70%;
     overflow: hidden;
@@ -732,11 +732,11 @@ figcaption {
 @keyframes slide {
     0% {
       transform: slide;
-      scale: 0;
+      opacity: 0;
     }
     100% {
       transform: slide;
-      scale: 1;
+      opacity: 1;
     }
   }
 
@@ -764,7 +764,7 @@ figcaption {
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 5rem 5rem 1fr 5rem;
+    grid-template-rows: 7rem 7rem 1fr 7rem;
     grid-auto-rows: 1fr;
     grid-template-areas:    "name email"
                             "phone subject"
@@ -838,7 +838,7 @@ figcaption {
 
 /* styles for invalid form when typing */
 .contact__data--look:invalid:focus {
-    background-color: var(--light-blue);
+    background-color: var(--light-pink);
     border: none;
     outline: .1rem solid red;
     border-radius: .2rem;
