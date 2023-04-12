@@ -300,19 +300,24 @@ main {
     }
 }
 
+.project__samples {
+    display: flex;
+    gap: 2em;
+    column-gap: 4rem;
+}
+
+@media screen and (max-width: 816px) {
+    .project__samples {
+        flex-direction: column;
+    }
+}
+
 .project__wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: block;
     padding: 1rem;
     background-color: var(--light-blue);
     border-radius: 1em;
     box-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.03),0 5px 30px hsla(0, 0%, 0%, 0.1);
-}
-
-@media screen and (max-width: 600px) {
-    .project__wrap {
-        grid-template-columns: auto;
-    }
 }
 
 .project__example {
@@ -341,7 +346,6 @@ figcaption {
 
 .project__description {
     display: grid;
-    align-content: space-between;
     margin: 2rem;
     font-family: 'Vollkorn', serif;
     font-size: 2em;
@@ -360,9 +364,29 @@ figcaption {
     padding-bottom: 2rem;
 }
 
-.project__title {
+.project__list {
+    margin-top: 2rem;
+}
+
+.project__list h1 {
+    margin-bottom: 1rem;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: .3rem;
+}
+
+.project__list ul {
+    margin-left: 2rem;
+    line-height: 2em;
+}
+
+.project__list li {
+    padding-left: .8rem;
+}
+
+.project__title {
+    text-transform: uppercase;
+    letter-spacing: .2em;
     font-size: 2.5rem;
 }
 
@@ -372,88 +396,9 @@ figcaption {
     }
 }
 
-/* STYLES FOR JOBIZ APP */
-
-.details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#project__btn {
+    margin-top: 2rem;
 }
-
-.details__wrap {
-    display: flex;
-    flex-direction: column;
-    max-width: 80rem;
-}
-
-.details__title {
-    padding-bottom: 1rem;
-    font-family: 'Vollkorn', serif;
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    text-align: center;
-}
-
-@media screen and (max-width: 816px){
-    .details__title {
-        font-size: 1.5em;
-    }
-}
-
-.details__img {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    max-width: 80rem;
-}
-
-.details__jobiz {
-    width: 100%;
-    border-radius: 1rem;
-}
-
-.details__description {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    font-family: 'Vollkorn', serif;
-    font-size: 2rem;
-    text-align: justify;
-    letter-spacing: .1rem;
-}
-
-@media screen and (max-width: 816px) {
-    .details__description {
-        font-size: 1.5rem;
-    }
-}
-
-.details__list {
-    margin-top: 4rem;
-}
-
-.details__list h1 {
-    margin-bottom: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: .3rem;
-}
-
-.details__list ul {
-    margin-left: 2rem;
-    line-height: 3rem;
-}
-
-.details__list li {
-    padding-left: .8rem;
-}
-
-.btn__details {
-    
-}
-
-
 
 /* STYLES FOR EDU&WORK */
 
@@ -676,11 +621,11 @@ figcaption {
 #contact {
     position: relative;
     padding: 2em;
+    overflow: hidden;
+    overflow-y: scroll;
     background-color: var(--light-blue);
     border: .2em solid var(--gray);
     width: 70%;
-    overflow: hidden;
-    overflow-y: scroll;
     max-height: 90%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     animation-name: rotate;
