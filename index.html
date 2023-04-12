@@ -13,32 +13,35 @@
     <script src="https://kit.fontawesome.com/18788bf696.js" crossorigin="anonymous"></script> 
     <script defer src="/menu.js"></script>
     <script defer src="/logo.js"></script>
+    <script defer src="/scroll.js"></script>
+    <script defer src="/validity.js"></script>
+    <script defer src="/contact.js"></script>
 </head>
 <body>
-  <div class="wrap wrap__contact">  
-    <header class="header">
+    <header id="header__main" class="header">
+        <a id="menu__burger" class="menu__item menu__item--hidden">
+            <i class="fa-solid fa-bars"></i>
+        </a>
         <div class="header__section header__section--media">
-            <a href="index.html">
-                <img src="img/me.jpg" alt="Me myself and I" height="130px" width="130px">
-            </a>
-        </div>
-        <div class="header__section header__section--menu">
             <a id="mainLogo" class="logo" href="index.html">
                 Agnieszka Liszka
             </a>
-            <nav class="menu" id="menu__burger">
+            <a href="index.html">
+                <img id="logo__img" src="img/me.jpg" alt="Me myself and I" height="90px" width="90px">
+            </a>
+        </div>
+        <div class="header__section header__section--menu">
+            <nav id="menu__nav" class="menu">
                 <div class="menu__wrap">
-                    <a class="menu__item" href="/projects.html">Projects</a>
-                    <a class="menu__item" href="/edu&work.html">Edu&Work</a>
-                    <a class="menu__item" href="/hobbies.html">Hobbies</a>
-                    <a class="menu__item" href="/contact.html">Contact</a>
+                    <a class="menu__item" href="#projects">Projects</a>
+                    <a class="menu__item" href="#edu&work">Edu&Work</a>
+                    <a class="menu__item" href="#hobbies">Hobbies</a>
+                    <a id="menu__item--modal" class="menu__item" href="#contact">Contact</a>
                 </div>
-                <a class="menu__item menu__item--hidden">
-                    <i class="fa-solid fa-bars"></i>
-                </a>
             </nav>
         </div> 
-    </header>
+    </header>  
+  <div class="wrap wrap__contact">  
    <section class="main">
         <article class="main__article">
             <h1>
@@ -59,6 +62,282 @@
               
         </article>
    </section>
+
+   <section id="projects" class="scroll">
+    <article class="project">
+        <div class="project__intro">
+            <h1 class="project__title">
+                Projects
+            </h1>
+            <p>
+                Clients projects and other proffesional work.
+            </p>
+        </div>  
+        <div class="project__samples">  
+            <div class="project__wrap">
+                <figure class="project__example">
+                    <a class="project__img">
+                        <img src="img/jobiz.jpg" alt="Screenshot of Jobiz application">
+                    </a>
+                    <figcaption>
+                        Jobiz (The IT Quiz)
+                    </figcaption> 
+                </figure>
+                <div class="project__description">  
+                    <div class="project__text">
+                        The aim of this project was to provide an educational application in the form of a quiz and allowing you to test your knowledge of technologies used at work as a frontend or backend developer. 
+                    </div> 
+                    <div class="project__list">
+                        <h1>
+                            Technologies used in project:
+                        </h1>
+                        <ul>
+                            <li>
+                                Miro
+                            </li>
+                            <li>
+                                Figma
+                            </li>
+                            <li>
+                                GitHub
+                            </li>
+                            <li>
+                                HTML
+                            </li>
+                            <li>
+                                CSS
+                            </li>
+                            <li>
+                                JavaScript
+                            </li>
+                            <li>
+                                Web API   
+                            </li>
+                            <li>
+                                Fetch API 
+                            </li>
+                            <li>
+                                LocalStorage
+                            </li>
+                            <li>
+                                Snowpack
+                            </li>
+                            <li>
+                                Prettier
+                            </li>
+                            <li>
+                                Github pages and a script
+                            </li>
+                        </ul>
+                    </div>
+                    <a id="project__btn" class="btn" href="https://coderscampcrew.github.io/Jobiz/" target="_blank" rel="noopener">
+                        View Site
+                    </a> 
+                </div>
+            </div> 
+            <div class="project__wrap">
+                <figure class="project__example">
+                    <a class="project__img">
+                        <img src="img/jobiz.jpg" alt="Screenshot of Jobiz application">
+                    </a>
+                    <figcaption>
+                        Jobiz (The IT Quiz)
+                    </figcaption> 
+                </figure>
+                <div class="project__description">  
+                    <div class="project__text">
+                        The aim of this project was to provide an educational application in the form of a quiz and allowing you to test your knowledge of technologies used at work as a frontend or backend developer. 
+                    </div> 
+                    <div class="project__list">
+                        <h1>
+                            Technologies used in project:
+                        </h1>
+                        <ul>
+                            <li>
+                                Miro
+                            </li>
+                            <li>
+                                Figma
+                            </li>
+                            <li>
+                                GitHub
+                            </li>
+                            <li>
+                                HTML
+                            </li>
+                            <li>
+                                CSS
+                            </li>
+                            <li>
+                                JavaScript
+                            </li>
+                            <li>
+                                Web API   
+                            </li>
+                            <li>
+                                Fetch API 
+                            </li>
+                            <li>
+                                LocalStorage
+                            </li>
+                            <li>
+                                Snowpack
+                            </li>
+                            <li>
+                                Prettier
+                            </li>
+                            <li>
+                                Github pages and a script
+                            </li>
+                        </ul>
+                    </div>
+                    <a id="project__btn" class="btn" href="https://coderscampcrew.github.io/Jobiz/" target="_blank" rel="noopener">
+                        View Site
+                    </a> 
+                </div>
+            </div> 
+        </div>    
+    </article>
+   </section>
+
+   <section id="edu&work" class="scroll">
+    <article class="project">
+        <div class="project__intro">
+            <h1 class="project__title">
+                Education and Work
+            </h1>
+            <p>
+                As you can see, I have changed industries diametrically from sociology and management in college, through hotel management, to programming that interests me the most. It's been a long journey to discover what I really want to do with my life! But it's not over yet..&#128521;
+            </p>
+        </div>    
+    </article>          
+    <section class="experience">
+        <article class="experience__part">
+            <h1>Education</h1>
+            <div class="experience__degree">
+                <div class="experience__icon">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <div class="experience__description">
+                    <span>Jagiellonian University</span>
+                    <span>Krakow</span>
+                    <span>Management Psychology</span>
+                    <span>2009 - 2011</span>
+                </div>
+            </div>
+            <div class="experience__degree">
+                <div class="experience__icon">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <div class="experience__description">
+                    <span>AGH University of Science and Technology</span>
+                    <span>Krakow</span>
+                    <span>Multimedia and social communication</span>
+                    <span>2008 - 2010</span>
+                </div>
+            </div>
+            <div class="experience__degree">
+                <div class="experience__icon">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <div class="experience__description">
+                    <span>Krakow University</span>
+                    <span>Krakow</span>
+                    <span>Sociology</span>
+                    <span>2005 - 2008</span>
+                </div>
+            </div>
+        </article>
+        <article class="experience__part">
+        <h1>Work</h1>
+        <div class="experience__degree">
+                <div class="experience__icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <div class="experience__description">
+                    <span>Codli</span>
+                    <span>Krakow</span>
+                    <span>Junior Web Developer</span>
+                    <span>2022 - now</span>
+                </div>
+            </div>
+            <div class="experience__degree">
+                <div class="experience__icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <div class="experience__description">
+                    <span>Krakow For You</span>
+                    <span>Krakow</span>
+                    <span>Rooms Division Manager</span>
+                    <span>2013 - 2022</span>
+                </div>
+            </div>
+            <div class="experience__degree">
+                <div class="experience__icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <div class="experience__description">
+                    <span>Krakow For You</span>
+                    <span>Krakow</span>
+                    <span>Front Office Manager</span>
+                    <span>2011 - 2012</span>
+                </div>
+            </div>
+            <div class="experience__degree">
+                <div class="experience__icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <div class="experience__description">
+                    <span>Krakow For You</span>
+                    <span>Krakow</span>
+                    <span>Receptionist</span>
+                    <span>2007 - 2011</span>
+                </div>
+            </div>
+        </article>
+    </section>
+   </section>
+
+   <section id="hobbies" class="scroll">
+    <article class="project">
+        <div class="project__intro">
+            <h1 class="project__title">
+                Hobbies
+            </h1>
+            <p>
+                My favorite hobby is.. &#128517
+            </p>
+        </div> 
+    </article>
+   <section class="main">
+        <div class="grid">
+            <div class="img-wrapper">
+                <img class="blur" src="img/travel.jpg">
+                <div class="content fade">My passion is travelling and discovering new places. It makes me realize that the world is so beautiful and there is so much to admire. I love the feeling I get when I plan a new trip. It not only increases my knowledge, but also excites me. I get to learn more and more about myself and I am able to expand my horizons every time I travel.</div>
+            </div>
+            <div class="img-wrapper">
+                <img class="zoom blur" src="img/bike.jpg">
+                <div class="content fade">Cycling is one of my leisure activities which keeps my body healthy and my mind relaxed. I love to ride a bike since I was a child. It reminds me that I can always feel like a little girl with wind in my hair. This is my way of getting rid of a bad mood and it always makes me smile!</div>
+            </div>
+            <div class="img-wrapper">
+                <img class="blur" src="img/mountains.jpg">
+                <div class="content slide-left">The mountains have such magic in them. They can be also dangerous and make me feel so small. Climbing mountains has taught me patience, persistence and gratitude. All the problems in my life disappear when I'm in the mountains and life slows down a bit. After spending time around them or climbing them I always want to come back.</div>
+            </div>
+            <div class="img-wrapper">
+                <img class="blur" src="img/swimming.jpg">
+                <div class="content slide-right">Swimming and aqua aerobics make me feel very fit and healthy. For me, there is no better feeling than the buzz I get from swimming. Being in the water is one of the best feelings ever! </div>
+            </div>
+            <div class="img-wrapper">
+                <img class="blur" src="img/book.jpg">
+                <div class="content slide-down">There is one passion that I can never give up – reading. For me, reading is like dreaming with my eyes open. A great book can distract me from the present and take me to another world. These few moments, though short-lived, will provide all necessary distraction from stress at life. When I  read a book, I'm completely engrossed in the story.</div>
+            </div>
+            <div class="img-wrapper">
+                <img class="blur" src="img/flowers.jpg">
+                <div class="content slide-up">Taking care of plants maintains me simultaneously in two worlds - home and nature, i.e. in the world of my family and its joy and problems, as well as the world of plants, flowers and their charms. Home gardening gives me real joy and satisfaction with my heart and mind. It allows me to focus on specific activities and cleanse the mind.</div>
+            </div>
+        </div>
+   </section>
+   </section>
    <footer class="contact__footer">  
     <div class="social">
        <a target="_blank" href="https://www.instagram.com/agnieszkaliszka/">
@@ -74,5 +353,53 @@
     <p>&copy; Agnieszka Liszka 2022</p>
 </footer>
   </div>
+  <div id="contact__modal">
+    <section id="contact">
+        <span id="contact__close">&times;</span>
+        <article id="contact__intro" class="project">
+            <div class="project__intro">
+                <h1 class="project__title">
+                    Contact
+                </h1>
+                <p>
+                    If you’d like to chat about a project or just have question, please fill in the form below. I aim to get back within 2 days.
+                </p>
+            </div>    
+        </article> 
+        <form autocomplete="off" id="contact__form" action="results.html" method="GET" novalidate>
+            <div class="contact__data" id="contact__name">
+                <label for="name">Name</label>
+                <input autocomplete="off" class="contact__data--look" type="text" name="name" id="name" minlength="3" maxlength="10" required >
+                <div class="contact__form--error"></div>
+            </div>
+            <div class="contact__data" id="contact__email">
+                <label for="email">Email</label>
+                <input class='contact__data--look' type="email" name="email" id="email" required>
+                <div class="contact__form--error"></div>
+            </div>
+            <div class="contact__data" id="contact__phone">
+                <label for="phone">Phone</label>
+                <input placeholder="xxx-xxx-xxx" class="contact__data--look" type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
+                <div class="contact__form--error"></div>
+            </div>
+            <div class="contact__data" id="contact__subject">
+                <label for="subject">Subject</label>
+                <input required class="contact__data--look" type="text" name="subject" id="subject">
+                <div class="contact__form--error"></div>
+            </div>
+            <div class="contact__data" id="contact__message">
+                <label for="message">Message</label>
+                <textarea class="contact__data--look" name="message" id="message"></textarea>
+                <div class="contact__form--error"></div>
+            </div>
+            <div id="contact__button">
+                <label for="button"></label>
+                <input type="submit" class="btn" name="button" value="Send Message">
+                <div class="contact__form--error"></div>
+            </div>
+        </form>
+    </section>
+    </div>
+
 </body>
 </html>
